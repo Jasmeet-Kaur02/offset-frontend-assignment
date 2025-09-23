@@ -1,4 +1,4 @@
-import Profile from "../assets/profile-dummy.jpg";
+import { ProfileMenu } from "../atoms/ProfileMenu";
 
 export function Header({ setIsOpen }) {
   return (
@@ -6,6 +6,11 @@ export function Header({ setIsOpen }) {
       className="h-16 bg-white border-b border-black/15 border-opacity-30 
     flex items-center justify-between lg:justify-end px-4 lg:px-6 z-0"
     >
+      {/* Company Name for mobile */}
+      <div className="h-16 lg:hidden flex items-center justify-center">
+        <h1 className="text-3xl font-robotoSemibold text-black">Offset</h1>
+      </div>
+
       {/* Left: Hamburger for mobile */}
       <button
         className="lg:hidden p-2"
@@ -39,12 +44,10 @@ export function Header({ setIsOpen }) {
         </svg>
       </button>
 
-      {/* Right: Profile Image  */}
-      <img
-        src={Profile}
-        alt="Profile"
-        className="w-14 h-14 rounded-full object-cover"
-      />
+      {/* Right: Profile Image for desktop  */}
+      <div className="hidden lg:block">
+        <ProfileMenu />
+      </div>
     </header>
   );
 }
