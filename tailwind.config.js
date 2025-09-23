@@ -37,7 +37,7 @@ export default {
         dark: "#0B0B0B",
         black: "#000",
         blue: "#1976D2",
-        blueLight: "#EAFBFF",
+        blueLight: "#127ee94f",
         bgLight: "#F5F7FA",
         blueDark: "#020BB5",
         gray: "#9E9E9E",
