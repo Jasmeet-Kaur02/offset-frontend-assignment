@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Credit Retirement Certificate</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .certificate-container {
+      background: #ffffff;
+      padding: 40px 30px;
+      width: 600px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate-id {
+        font-size: 8px;
+    }
+
+    .certificate-date {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .company-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000; /* Green tone */
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      border-bottom: 2px solid #2e7d32;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .certificate-body {
+      font-size: 18px;
+      color: #444444;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .details {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #d0d0d0;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    .details p {
+      margin: 8px 0;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 10px;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="certificate-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="company-name">Offset</div>
+      <div class="certificate-id">Certificate ID: {{certificate_id}}</div>
+    </div>
+
+    <!-- Title -->
+    <div class="title">Carbon Credit Retirement Certificate</div>
+    <div class="certificate-date">Certificate Issued : {{certificate_issued}}</div>
+
+    <!-- Body -->
+    <div class="certificate-body">
+      <p>
+        Offset verifies that <strong>{{name}}</strong> retired 
+        <strong>{{tons}}</strong> tons of CO₂ emissions by supporting 
+        <strong>{{project_name}}</strong>.
+      </p>
+
+      <p>
+        This certifies that the following carbon credit has been retired:
+      </p>
+
+      <!-- Details Section -->
+      <div class="details">
+        <p><strong>Project Name:</strong> {{project_name}}</p>
+        <p><strong>UNIC ID:</strong> {{unic_id}}</p>
+        <p><strong>Vintage Year:</strong> {{vintage}}</p>
+        <p><strong>Status:</strong> {{status}}</p>
+        <p><strong>Carbon Offset:</strong> 1 Ton CO₂</p>
+        <p><strong>Retirement Date:</strong> {{retirement_date}}</p>
+      </div>
+
+      <p style="margin-top:20px;">
+        This retirement ensures that the carbon credit can no longer be sold or traded 
+        and represents a permanent offset of greenhouse gas emissions.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Verified and issued by <strong>Offset Platform</strong>
+    </div>
+  </div>
+
+</body>
+</html>

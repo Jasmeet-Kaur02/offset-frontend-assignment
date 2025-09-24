@@ -1,4 +1,8 @@
-export function CarbonCreditCard({ project_name, unic_id, vintage, status }) {
+import { downloadCertificate } from "../utils/downloadCertificate";
+
+export function CarbonCreditCard({ credit }) {
+  const { project_name, unic_id, vintage, status } = credit;
+
   return (
     <div className="bg-white rounded-md py-4 px-4 border border-black border-opacity-10">
       <h5 className="font-robotoSemibold text-lg md:text-xl xl:text-lg 2xl:text-2xl">
@@ -24,9 +28,16 @@ export function CarbonCreditCard({ project_name, unic_id, vintage, status }) {
         >
           {status}
         </span>
-        <button className="bg-blue text-white rounded-md text-sm font-robotoMedium py-[8px] px-[12px]">
-          Download Certificate
-        </button>
+        {status !== "Active" && (
+          <button
+            onClick={() =>
+              downloadCertificate({ ...credit, name: "Jasmeet Kaur" })
+            }
+            className="bg-blue text-white rounded-md text-sm font-robotoMedium py-[8px] px-[12px]"
+          >
+            Download Certificate
+          </button>
+        )}
       </div>
     </div>
   );
