@@ -22,10 +22,10 @@ A simple React + Tailwind CSS dashboard to view and manage carbon credits.
 
 ###### Main page -
 Show only relevant information that users need at a glance - Project Name, UNIC Id, Status, Vintage. 
-Added a search to quikly find a credits based on vintage year and name. Added Download button on each card to give user quick access to download certificate.
+Added a search to quikly find a credits by vintage year and name and download button on each card to give user instant access to the certificate.
 
 ###### Details Page - 
-Add in-depth information about credit. this separation keeps the dashboard lightweight while providing full details when required. 
+Add in-depth information about credit. This separation keeps the dashboard lightweight while providing full details when required. 
 
 #### What design choices did you make to keep it clean?
 - Minimalist layout with plenty of whitespace for readability.
