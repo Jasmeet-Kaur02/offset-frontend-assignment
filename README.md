@@ -68,7 +68,6 @@ http://localhost:3000
 offset-frontend-assignment/
 │
 ├─ public/
-│   └─ certificate.html
 │
 ├─ src/
 │   ├─ assets/
@@ -90,7 +89,7 @@ offset-frontend-assignment/
 │   │       └─ index.jsx
 │   │
 │   ├─ utils/
-│   │   └─ downloadCertificate.js
+│   │   └─ CertificatePDF.jsx
 │   
 ├─ App.jsx
 ├─ index.css
