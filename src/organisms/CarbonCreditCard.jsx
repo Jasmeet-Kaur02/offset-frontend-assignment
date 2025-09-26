@@ -1,4 +1,5 @@
-import { downloadCertificate } from "../utils/downloadCertificate";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import CertificatePDF from "../utils/CertificatePDF";
 
 export function CarbonCreditCard({ credit }) {
   const { project_name, unic_id, vintage, status } = credit;
@@ -29,14 +30,24 @@ export function CarbonCreditCard({ credit }) {
           {status}
         </span>
         {status !== "Active" && (
-          <button
-            onClick={() =>
-              downloadCertificate({ ...credit, name: "Jasmeet Kaur" })
+          <PDFDownloadLink
+            document={
+              <CertificatePDF credit={{ ...credit, name: "Jasmeet Kaur" }} />
             }
-            className="bg-blue text-white rounded-md text-sm font-robotoMedium py-[8px] px-[12px]"
+            fileName={`certificate-${credit.unic_id}.pdf`}
+            style={{
+              textDecoration: "none",
+              padding: "8px 12px",
+              color: "#fff",
+              backgroundColor: "#1976D2",
+              borderRadius: 6,
+              fontSize: 14,
+            }}
           >
-            Download Certificate
-          </button>
+            {({ loading }) =>
+              loading ? "Downloading..." : "Download Certificate"
+            }
+          </PDFDownloadLink>
         )}
       </div>
     </div>
